@@ -44,7 +44,6 @@ public:
         if (root) {
             Q = root;
         }
-
         while (Q) {
             // 下一层结点的前驱
             Node *nextLevelPreNode = nullptr;
