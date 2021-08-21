@@ -78,14 +78,12 @@ class MyCircularQueue {
     int capacity = 0;
     // 循环队列的存储空间
     vector<int> a;
-
    public:
     MyCircularQueue(int k) {
         // 初始化循环队列
         capacity = k;
         a.resize(k);
     }
-
     bool enQueue(int value) {
         // 如果已经放满了
         if (used == capacity) {
@@ -100,7 +98,6 @@ class MyCircularQueue {
         // 存放成功!
         return true;
     }
-
     bool deQueue() {
         // 如果是一个空队列，当然不能出队
         if (used == 0) {
@@ -115,7 +112,6 @@ class MyCircularQueue {
         // 取出元素成功
         return true;
     }
-
     int Front() {
         // 如果为空，不能取出队首元素
         if (used == 0) {
@@ -124,7 +120,6 @@ class MyCircularQueue {
         // 取出队首元素
         return a[front];
     }
-
     int Rear() {
         // 如果为空，不能取出队尾元素
         if (used == 0) {
@@ -135,7 +130,6 @@ class MyCircularQueue {
         int tail = (rear - 1 + capacity) % capacity;
         return a[tail];
     }
-
     // 队列是否为空
     bool isEmpty() { return used == 0; }
 
