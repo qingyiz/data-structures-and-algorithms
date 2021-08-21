@@ -112,7 +112,6 @@ class MyCircularQueue {
         int tail = (rear - 1 + capacity) % capacity;
         return isEmpty() ? -1 : a[tail];
     }
-
     // 队列是否为空
     bool isEmpty() { return front == rear; }
 
@@ -121,7 +120,6 @@ class MyCircularQueue {
     // 队列就已经放满了!
     bool isFull() { return (rear + 1) % capacity == front; }
 };
-
 /**
  * Your MyCircularQueue object will be instantiated and called as such:
  * MyCircularQueue* obj = new MyCircularQueue(k);
