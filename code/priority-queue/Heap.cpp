@@ -1,5 +1,6 @@
  #include "Heap.h"
  
+ //下沉
 void Heap::sink(int i) {
     int j = 0;
     int t = a[i];

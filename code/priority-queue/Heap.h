@@ -3,6 +3,7 @@
 #include <iostream>
 
 using namespace std;
+
 class Heap {
 
 public:
@@ -14,7 +15,7 @@ private:
      void sink(int i);
     // 上浮
     void swim(int i);
-private: 
+public: 
     int n = 0;
     vector<int> a;
 };
