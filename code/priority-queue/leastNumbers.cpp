@@ -8,6 +8,8 @@ using namespace std;
 给定一个数组 a[]，返回这个数组中最小的 k 个数。
 输入：A = [3,2,1], k = 2
 输出：[2, 1]
+
+编译需要加上 -std=c++11
 */
 
 vector<int> getLeastNumbers(vector<int> & arr, int k)
@@ -20,10 +22,10 @@ vector<int> getLeastNumbers(vector<int> & arr, int k)
         return arr;
     }
 
-    for(int x = 0; x < arr.size();x++){
-    //for(auto x: arr){
-        heap->push(arr[x]);
-        //heap->push(x);
+    //for(int x = 0; x < arr.size();x++){
+    for(auto x: arr){
+        //heap->push(arr[x]);
+        heap->push(x);
         while(heap->size() > k){            
             heap->pop();
         }

@@ -14,6 +14,8 @@ using namespace std;
  *  输入：points = [[3,3],[5,-1],[-2,4]], K = 2
  *  输出：[[3,3],[-2,4]]
  * （答案 [[-2,4],[3,3]] 也会被接受。）
+ * 
+ *  编译需要加上 -std=c++11
 */
 vector<vector<int>> kClosest(vector<vector<int>>& A, int K) 
 {
@@ -47,11 +49,7 @@ vector<vector<int>> kClosest(vector<vector<int>>& A, int K)
 
 int main()
 {
-    vector<vector<int>> v;
-    v.push_back({0,311      });
-    v.push_back({12,0});
-    v.push_back({100,1});
-    v.push_back({1,100});
+    vector<vector<int>> v{{0,311},{12,0},{100,1},{100,1}};
     vector<vector<int>> ans = kClosest(v,2);
     for (int i = 0; i < ans.size();i++){
         cout << "[";

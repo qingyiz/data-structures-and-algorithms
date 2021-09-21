@@ -119,15 +119,7 @@ vector<string> topKFrequent_2(vector<string> & A, int k)
 
 int main()
 {
-    vector<string> v;
-    v.push_back("AA");
-    v.push_back("BB");
-    v.push_back("AA");
-    v.push_back("BB");
-    v.push_back("CCC");
-    v.push_back("CCC");
-    v.push_back("CCC");
-    v.push_back("AA");
+    vector<string> v{"AA","BB","AA","BB","CCC","CCC","CCC","AA"};
     vector<string> ans = topKFrequent_1(v,2);
     for (int i = 0; i < ans.size();i++){
         cout << ans[i] << " ";

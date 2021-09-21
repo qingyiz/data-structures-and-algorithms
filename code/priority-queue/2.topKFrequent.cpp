@@ -113,18 +113,7 @@ vector<int> topKFrequent_2(vector<int> & A, int k)
 
 int main()
 {
-    vector<int> v;
-    v.push_back(1);
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
-    v.push_back(4);
-    v.push_back(2);
-    v.push_back(2);
-    v.push_back(1);
-    v.push_back(3);
-    v.push_back(4);
-    v.push_back(5);
+    vector<int> v{1,1,2,3,4,2,2,1,3,4,5};
     vector<int> ans = topKFrequent_1(v,2);
     for (int i = 0; i < ans.size();i++){
         cout << ans[i] << " ";
