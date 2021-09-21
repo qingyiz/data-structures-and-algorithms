@@ -3,6 +3,13 @@
 #include <vector>
 using namespace std;
 
+
+/*
+给定一个数组 a[]，返回这个数组中最小的 k 个数。
+输入：A = [3,2,1], k = 2
+输出：[2, 1]
+*/
+
 vector<int> getLeastNumbers(vector<int> & arr, int k)
 {
     Heap *heap = new Heap();
@@ -12,21 +19,22 @@ vector<int> getLeastNumbers(vector<int> & arr, int k)
     if(arr.size() == k){
         return arr;
     }
-    heap->a.resize(k+1);
-    heap->n = 0;
+
     for(int x = 0; x < arr.size();x++){
     //for(auto x: arr){
         heap->push(arr[x]);
-        while(heap->size() > k){
+        //heap->push(x);
+        while(heap->size() > k){            
             heap->pop();
         }
     }
+    heap->printf_heap();
     vector<int> ans;
 
     while (heap->size()) {
         ans.push_back(heap->pop());
     }
-
+    
     return ans;
 }
 
@@ -39,12 +47,16 @@ int main()
     v.push_back(4);
     v.push_back(6);
     v.push_back(9);
-    vector<int> ans = getLeastNumbers(v,9);
+    v.push_back(5);
+    v.push_back(12);
+    vector<int> ans = getLeastNumbers(v,10);
     cout << "["<<" ";
     for(int i = 0;i < ans.size();i++){
         cout<<ans[i]<<" ";
     }
     cout <<"]"<< endl;
+
+
     return 0;
 
 }
